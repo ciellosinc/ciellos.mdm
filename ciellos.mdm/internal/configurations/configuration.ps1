@@ -18,7 +18,7 @@ Set-PSFConfig -FullName 'ciellos.mdm.settings.all.headless' -Value $true -Initia
 Set-PSFConfig -FullName "ciellos.mdm.path.sqlpackage" -Value "C:\Program Files (x86)\Microsoft SQL Server\140\DAC\bin\SqlPackage.exe" -Initialize -Description "Path to the default location where SqlPackage.exe is located."
 Set-PSFConfig -FullName "ciellos.mdm.azure.common.oauth.token" -Value "https://login.microsoftonline.com/common/oauth2/token" -Initialize -Description "URI / URL for the Azure Active Directory OAuth 2.0 endpoint for tokens"
 
-Set-PSFConfig -FullName 'ciellos.mdm.settings.all.fscpsSettingsFile' -Value 'settings.json' -Initialize -Description 'The name of the file has custom fscps settings. JSON'
+Set-PSFConfig -FullName 'ciellos.mdm.settings.all.mdmSettingsFile' -Value 'settings.json' -Initialize -Description 'The name of the file has custom fscps settings. JSON'
 
 Set-PSFConfig -FullName 'ciellos.mdm.settings.github.runs-on' -Value '' -Initialize -Description 'Specifies which github runner will be used for all jobs in all workflows (except the Update FSC-PS System Files workflow). The default is to use the GitHub hosted runner Windows-latest. You can specify a special GitHub Runner for the build job using the GitHubRunner setting.'
 Set-PSFConfig -FullName 'ciellos.mdm.settings.all.fscPsVer' -Value $script:ModuleVersion -Initialize -Description 'Version of the ciellos.mdm module'
@@ -58,3 +58,8 @@ Set-PSFConfig -FullName 'ciellos.mdm.settings.github.secretsList' -Value @('nuge
 
 Set-PSFConfig -FullName "ciellos.mdm.azure.storage.accounts" -Value @{} -Initialize -Description "Object that stores different Azure Storage Account and their details."
 Set-PSFConfig -FullName "ciellos.mdm.active.azure.storage.account" -Value @{} -Initialize -Description "Object that stores the Azure Storage Account details that should be used during the module."
+
+Set-PSFConfig -FullName "ciellos.mdm.settings.all.bamboohr.apikey" -Value "" -Initialize -Description "The API key for BambooHR. This is used to connect to the BambooHR API and perform actions on it."
+Set-PSFConfig -FullName "ciellos.mdm.settings.all.bamboohr.url" -Value "https://api.bamboohr.com/" -Initialize -Description "The URL of the BambooHR environment. This is used to connect to the BambooHR environment and perform actions on it. The default is https://api.bamboohr.com/"
+Set-PSFConfig -FullName "ciellos.mdm.settings.all.bamboohr.companyDomain" -Value "Ciellos" -Initialize -Description "The company domain for BambooHR. This is used to connect to the BambooHR environment and perform actions on it. The default is Ciellos"
+Set-PSFConfig -FullName "ciellos.mdm.settings.all.bamboohr.apiVersion" -Value "v1" -Initialize -Description "The API version for BambooHR. This is used to connect to the BambooHR environment and perform actions on it. The default is v1."

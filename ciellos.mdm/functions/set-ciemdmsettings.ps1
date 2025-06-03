@@ -47,7 +47,7 @@ function Set-CieMDMSettings {
         }
 
         $fscpsFolderName = Get-PSFConfigValue -FullName "ciellos.mdm.settings.all.fscpsFolder"
-        $fscmSettingsFile = Get-PSFConfigValue -FullName "ciellos.mdm.settings.all.fscpsSettingsFile"
+        $fscmSettingsFile = Get-PSFConfigValue -FullName "ciellos.mdm.settings.all.mdmSettingsFile"
         $fscmRepoSettingsFile = Get-PSFConfigValue -FullName "ciellos.mdm.settings.all.fscpsRepoSettingsFile"
         Write-PSFMessage -Level Verbose -Message "fscpsFolderName is: $fscpsFolderName"
         Write-PSFMessage -Level Verbose -Message "fscmSettingsFile is: $fscmSettingsFile"
