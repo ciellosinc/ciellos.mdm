@@ -1,4 +1,4 @@
-﻿$script:ModuleRoot = "D:\Sources\ciellos.mdm\ciellos.mdm"
+﻿$script:ModuleRoot = $PSScriptRoot
 $script:ModuleVersion = (Import-PowerShellDataFile -Path "$($script:ModuleRoot)\ciellos.mdm.psd1").ModuleVersion
 $Script:DefaultTempPath = "c:\temp\ciellos.mdm"
 # Detect whether at some level dotsourcing was enforced
