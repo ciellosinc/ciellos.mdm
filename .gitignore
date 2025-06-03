@@ -1,0 +1,6 @@
+﻿publish
+TestResults
+_test.ps1
+/library/ciellos.mdm/bin
+/library/ciellos.mdm/obj
+.vs
